@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view_trending_word"
+    android:layout_width="200dp"
+    android:layout_height="250dp"
+    android:layout_margin="8dp"
+    card_view:cardCornerRadius="16dp"
+    android:background="@drawable/rounded_background_for_dashbaord_layouts"
+    card_view:cardElevation="4dp"
+    card_view:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Optional: Image for the word -->
+        <ImageView
+            android:id="@+id/image_word"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/ic_volume"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="Word Image" />
+
+        <!-- Word Text -->
+        <TextView
+            android:id="@+id/text_word"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ebullient"
+            android:fontFamily="@font/abel"
+
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center_horizontal" />
+
+        <!-- Definition Text -->
+        <TextView
+            android:id="@+id/text_definition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cheerful and full of energy."
+            android:textSize="14sp"
+            android:fontFamily="@font/abel"
+
+            android:textColor="@color/black"
+            android:layout_marginTop="8dp"
+            android:gravity="center" />
+
+        <!-- Pronunciation and Example -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/text_pronunciation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/iˈbʌliənt/"
+                android:fontFamily="@font/abel"
+
+                android:textSize="12sp"
+                android:textColor="@color/text_grey" />
+
+            <ImageView
+                android:id="@+id/image_pronunciation_audio"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_volume"
+                android:contentDescription="Pronunciation Audio"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_example"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Her ebullient personality made everyone around her feel joyful."
+            android:textSize="12sp"
+            android:fontFamily="@font/abel"
+
+            android:textColor="@color/black"
+            android:layout_marginTop="8dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

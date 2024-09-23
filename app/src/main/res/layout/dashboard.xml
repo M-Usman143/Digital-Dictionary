@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_main_layout_bg"
+    tools:context=".Activities.Dashboard">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+
+        <!-- 1. Heading Text -->
+        <TextView
+            android:id="@+id/text_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Digital Dictionary"
+            android:fontFamily="@font/abel"
+
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="16dp" />
+
+        <!-- 2. Search Bar -->
+        <EditText
+            android:id="@+id/edittext_search"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/searchbar_bg"
+            android:hint="Search for a word"
+            android:fontFamily="@font/abel"
+
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:drawableLeft="@drawable/ic_search"
+            android:drawablePadding="10dp"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+
+        <!-- 3. Recent Searches -->
+        <TextView
+            android:id="@+id/text_recent_searches_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recent Searches"
+            android:fontFamily="@font/abel"
+
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="24dp" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <!-- Example Recent Search Chips -->
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_recent_1"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abel"
+
+                    android:text="Ebullient"
+                    android:textColor="@color/white"
+                    android:layout_marginEnd="8dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_recent_2"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Serendipity"
+                    android:fontFamily="@font/abel"
+
+                    android:textColor="@color/white"
+                    android:layout_marginEnd="8dp" />
+
+                <!-- Add more chips as needed -->
+            </LinearLayout>
+        </HorizontalScrollView>
+
+
+        <!-- 4. Trending Words -->
+        <TextView
+            android:id="@+id/text_trending_words_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trending Words"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/abel"
+
+            android:textColor="@color/black"
+            android:layout_marginTop="24dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_trending_words"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal" />
+
+
+
+
+        <!-- 3. Horizontal Scrollable Colored Layouts -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <!-- Colored Layout 1 -->
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/category2_layout_bg"
+                    android:gravity="center"
+                    android:id="@+id/favouriteLayout"
+                    android:layout_marginRight="16dp"
+                    android:elevation="4dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Favourites"
+                        android:fontFamily="@font/abel"
+
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- Colored Layout 2 -->
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/category1_layout_bg"
+                    android:gravity="center"
+                    android:id="@+id/quizzLayout"
+                    android:layout_marginRight="16dp"
+                    android:elevation="4dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Quiz"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/abel"
+
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- Colored Layout 3 -->
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/category3_layout_bg"
+                    android:gravity="center"
+                    android:id="@+id/historyLayout"
+                    android:layout_marginRight="16dp"
+                    android:elevation="4dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="History"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/abel"
+
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- Colored Layout 4 -->
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/category4_layout_bg"
+                    android:gravity="center"
+                    android:id="@+id/settingLayout"
+                    android:layout_marginRight="16dp"
+                    android:elevation="4dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Settings"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/abel"
+
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+
+        <!-- 6. Vocabulary Tips or Mini-Quizzes -->
+        <TextView
+            android:id="@+id/text_vocabulary_tips_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vocabulary Tips"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/abel"
+
+            android:textColor="@color/black"
+            android:layout_marginTop="24dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:elevation="4dp"
+            android:background="@drawable/rounded_background_for_dashbaord_layouts"
+            android:radius="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/text_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abel"
+
+                    android:text="Expand your vocabulary by learning a new word every day!"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/button_read_more_tips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Read More"
+                    android:layout_gravity="end"
+                    android:fontFamily="@font/abel"
+
+                    android:backgroundTint="@color/blue"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/word_of_the_day_bg"
+            android:padding="16dp"
+            android:layout_marginTop="30dp"
+            android:elevation="4dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/text_word_of_the_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Word of the Day"
+                android:fontFamily="@font/abel"
+
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_gravity="center_horizontal" />
+
+            <!-- Example Content: Word, Definition, etc. -->
+            <TextView
+                android:id="@+id/text_word"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ebullient"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/abel"
+
+                android:textColor="@color/black"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:id="@+id/text_definition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Definition: Cheerful and full of energy."
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/abel"
+
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center_horizontal" />
+
+            <!-- Optional: Pronunciation and Example -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/text_pronunciation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pronunciation: /iˈbʌliənt/"
+                    android:fontFamily="@font/abel"
+
+                    android:textSize="14sp"
+                    android:textColor="@color/text_grey" />
+
+                <ImageView
+                    android:id="@+id/image_pronunciation"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_volume"
+                    android:layout_marginLeft="8dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_example"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/abel"
+
+                android:text="Example: Her ebullient personality made everyone around her feel joyful."
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center_horizontal" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>

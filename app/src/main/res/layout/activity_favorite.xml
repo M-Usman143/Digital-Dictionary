@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/activity_favourite"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:background="@drawable/home_main_layout_bg"
+tools:context=".Activities.Favorite">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+
+        <!-- 1. Heading Text -->
+        <TextView
+            android:id="@+id/text_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Digital Dictionary"
+            android:fontFamily="@font/abel"
+
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="16dp" />
+
+        <!-- 2. Search Bar -->
+        <EditText
+            android:id="@+id/edittext_search_favorites"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/searchbar_bg"
+            android:hint="Search for a word"
+            android:fontFamily="@font/abel"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:drawableLeft="@drawable/ic_search"
+            android:drawablePadding="10dp"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+<!-- RecyclerView for Favorite Words -->
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/recyclerview_favorite_words"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:padding="16dp" />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/layout_empty_state"
+    android:orientation="vertical">
+
+    <!-- Optional: Empty View -->
+    <ImageView
+        android:id="@+id/iv_empty_favourites"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_favorite"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp" />
+
+    <!-- Optional: Empty View -->
+    <TextView
+        android:id="@+id/tv_empty_favourites"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No favorites added yet."
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp" />
+
+
+</LinearLayout>
+    </LinearLayout>
+
+
+    </LinearLayout>

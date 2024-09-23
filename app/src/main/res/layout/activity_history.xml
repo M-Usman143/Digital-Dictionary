@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+    android:background="@color/white"
+android:padding="16dp">
+
+<EditText
+    android:id="@+id/edittext_search_history"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Search history"
+    android:padding="10dp"
+    android:background="@drawable/searchbar_bg" />
+
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/recyclerview_history_words"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="10dp"
+    android:visibility="visible"/>
+
+<LinearLayout
+    android:id="@+id/layout_empty_state"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:visibility="gone">
+
+    <ImageView
+        android:id="@+id/iv_empty_history"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_history_empty"
+        android:visibility="gone"
+        android:layout_marginTop="250dp" />
+
+    <TextView
+        android:id="@+id/tv_empty_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No history available."
+        android:textSize="16sp"
+        android:fontFamily="@font/abel"
+        android:textColor="@color/black"
+        android:visibility="gone"
+        android:layout_marginTop="10dp" />
+</LinearLayout>
+</LinearLayout>
